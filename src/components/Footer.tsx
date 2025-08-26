@@ -24,7 +24,7 @@ export default async function Footer() {
         </div>
       </footer>
     );
-  } catch (error) {
+  } catch {
     // Don't render footer when API fails
     return null;
   }

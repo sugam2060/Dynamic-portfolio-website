@@ -39,7 +39,7 @@ export default async function Hero() {
             {/* Right side - Text content */}
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-                Hi, I'm 
+                Hi, I&apos;m 
                 <span className="text-gradient"> Developer</span>
               </h1>
               
