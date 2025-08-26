@@ -6,12 +6,8 @@ import Experience from '@/components/Experience';
 import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import get_metadata_section from '../../actions/metadata_section';
 
 export default function Home() {
-
-  get_metadata_section()
-
   return (
     <main className="min-h-screen bg-background">
       <Header />

@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 export default async function Contact() {
   const contactInfo = await get_contact_info();
 
-  // Don't display component if no contact info data
+  // Don't render component if no contact info data
   if (!contactInfo) {
     return null;
   }

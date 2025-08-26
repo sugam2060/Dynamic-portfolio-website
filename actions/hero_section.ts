@@ -1,11 +1,12 @@
 "use server"
 import axios from "axios"
 
+const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+
 const get_hero_section = async () => {
     try {
-        const response = await axios.get(`http://localhost:1337/api/hero-section?populate=*`)
+        const response = await axios.get(`${API_URL}/api/hero-section?populate=*`)
         if (response.status === 200) {
-            console.log(response.data.data)
             return {
                 profile_picture: response.data.data.profile_picture.url,
                 title: response.data.data.Title,

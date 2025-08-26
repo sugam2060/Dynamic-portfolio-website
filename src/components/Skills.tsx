@@ -15,7 +15,7 @@ export default async function Skills() {
   const skills: Skill[] = await get_skills_section()
   const skillsHeading = await get_skills_heading()
 
-  // Don't display component if no skills data
+  // Don't render component if no skills data
   if (!skills || skills.length === 0) {
     return null;
   }

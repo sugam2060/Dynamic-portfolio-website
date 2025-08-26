@@ -18,7 +18,7 @@ export default async function Experience() {
   const experiences: Experience[] = await get_experience_section()
   const experienceHeading = await get_experience_heading()
 
-  // Don't display component if no experiences data
+  // Don't render component if no experiences data
   if (!experiences || experiences.length === 0) {
     return null;
   }

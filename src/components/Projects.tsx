@@ -20,10 +20,12 @@ export default async function Projects() {
   const projects = await get_project_section();
   const projectHeading = await get_project_heading();
 
-  // Don't display component if no projects data
+  // Don't render component if no projects data
   if (!projects || projects.length === 0) {
     return null;
   }
+
+  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
 
   return (
     <section id="projects" className="section-padding bg-muted/20">
@@ -47,7 +49,7 @@ export default async function Projects() {
                 {/* Project Image */}
                 <div className="w-full h-48 relative">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${project.project_image}`}
+                    src={`${strapiUrl}${project.project_image}`}
                     alt="project image"
                     fill
                     className="object-cover"

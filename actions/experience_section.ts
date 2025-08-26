@@ -1,7 +1,7 @@
 "use server";
 import axios from "axios";
 
-const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
+const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
 
 interface ExperienceItem {
     id: string;

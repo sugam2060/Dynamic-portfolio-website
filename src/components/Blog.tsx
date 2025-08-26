@@ -7,7 +7,7 @@ export default async function Blog() {
   const blogPosts = await get_blog_section();
   const blogHeading = await get_blog_heading();
 
-  // Don't display component if no blog posts data
+  // Don't render component if no blog posts data
   if (!blogPosts || blogPosts.length === 0) {
     return null;
   }
